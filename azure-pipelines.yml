@@ -1,0 +1,14 @@
+trigger:
+  branches:
+    include:
+    - '*'
+
+pool:
+  vmImage: 'windows-latest'
+
+jobs:
+- job: Build
+  displayName: 'Build and Test'
+  steps:
+  - checkout: self
+  - checkout: git:narayanarekar/DevOps-Tutorial#Main
